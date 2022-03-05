@@ -1,0 +1,36 @@
+<div class="px-4 py-5 my-5 text-center">
+    <h1 class="display-5 fw-bold">Login Here!</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead">Share your amazing recipes.Fill our form to get started.</p>
+    </div>
+    <%- include ('./partials/messages') %>
+  </div>
+
+
+<div class="row justify-content-center"> 
+    <div class="col-8">
+        <form action="/login" method="POST">
+            <div class="row g-3">
+                <%# Email %> 
+                <div class="col-12">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" name="email" id="email" class="form-control"  placeholder="Enter Email"
+                     required>
+                </div>
+
+                <div class="col-12">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" name="password" id="password" class="form-control" placeholder="Enter Password" required >
+                </div>
+
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </div>
+
+                <div class="row g-3 col-12">
+                    <a href="/register" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Register</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

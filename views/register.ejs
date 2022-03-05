@@ -1,0 +1,53 @@
+<div class="px-4 py-5 my-5 text-center">
+    <h1 class="display-5 fw-bold">Register Here!</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead">Share your amazing recipes.Fill our form to get started.</p>
+    </div>
+    <%- include ('./partials/messages') %>
+  </div>
+  
+
+<div class="row justify-content-center"> 
+    <div class="col-8">
+        <form action="/register" method="POST">
+            <div class="row g-3">
+                <%# Name %>
+                <div class="col-12">
+                    <label for="name" class="form-label">Username</label>
+                    <input type="text" name="name" id="name" class="form-control" placeholder="Enter Name"
+                    value="<%= typeof name != 'undefined' ? name : '' %>" required>
+                </div>
+
+                <%# Email %> 
+                <div class="col-12">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" name="email" id="email" class="form-control"  placeholder="Enter Email"
+                     required>
+                </div>
+
+                <div class="col-12">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" name="password" id="password" class="form-control" placeholder="Create Password"
+                    " required >
+                </div>
+                <div class="col-12">
+                    <label for="password" class="form-label">Confirm Password</label>
+                    <input type="password" name="password2" id="password2" class="form-control" placeholder="Confirm Password"
+                    " required >
+                </div>
+
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary">Register</button>
+                </div>
+
+                <div class="row g-3 col-12">
+                    <a href="/login" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Login</a>
+                </div>
+                
+
+                
+            </div>
+        </form>
+    </div>
+</div>
+
